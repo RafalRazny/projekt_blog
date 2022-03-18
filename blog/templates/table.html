@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+        <th scope="col"></th>
+        
+      </tr>
+    </thead>
+    <tbody>
+        {% for post in draft_posts %}
+      <tr>
+        <th scope="row">{{ post.pub_date.strftime('%Y-%m-%d') }}</th>
+        <td> {{ post.title }}</td>
+        <td> {{ post.body | truncate(150, True) }}</td>
+        <td scope="col">
+                <form class="form-inline my-2 my-lg-0" action="{{ url_for('delete_entry', entry_id=post.id) }}" method="POST">
+                    <button class="btn btn-light my-2 my-sm-0" type="submit">Delete</button>
+                  </form>
+        </td>
+      </tr>
+         {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}
