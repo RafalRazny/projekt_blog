@@ -1,5 +1,5 @@
-#from curses import noecho
-#from dataclasses import dataclass
+from curses import noecho
+from dataclasses import dataclass
 from flask import Flask, render_template, request, session, flash, redirect, url_for
 from blog import app
 from blog.models import Entry, db
