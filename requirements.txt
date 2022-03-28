@@ -1,6 +1,4 @@
 flask
-curses
-dataclasses
 functools
 datetime
 werkzeug
