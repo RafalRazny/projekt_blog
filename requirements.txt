@@ -8,4 +8,5 @@ flask_wtf
 wtforms
 werkzeug
 flask_sqlalchemy
-flask_migrate 
+flask_migrate
+gunicorn
