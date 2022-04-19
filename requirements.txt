@@ -1,3 +1,6 @@
-flask
 gunicorn
-flask_sqlalchemy
+Flask
+Flask-WTF
+WTForms
+Flask-Migrate
+SQLAlchemy
